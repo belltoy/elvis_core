@@ -2,8 +2,8 @@
 
 -export([default/1, line_length/3, no_tabs/3, no_trailing_whitespace/3]).
 
--define(LINE_LENGTH_MSG, "Line ~p is too long. It has ~p characters.").
--define(NO_TABS_MSG, "Line ~p has a tab at column ~p.").
+-define(LINE_LENGTH_MSG, "Line {{yellow-bold}}~p{{reset}} is too long. It has {{cyan-bold}}~p{{reset}} characters.").
+-define(NO_TABS_MSG, "Line {{yellow-bold}}~p{{reset}} has a tab at column {{yellow-bold}}~p{{reset}}.").
 -define(NO_TRAILING_WHITESPACE_MSG, "Line ~b has ~b trailing whitespace characters.").
 
 % These are part of a non-declared "behaviour"

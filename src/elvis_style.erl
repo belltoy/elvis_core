@@ -15,44 +15,44 @@
 -export_type([ignorable/0]).
 
 -define(INVALID_MACRO_NAME_REGEX_MSG,
-        "The macro named ~p on line ~p does not respect the format "
-        "defined by the regular expression '~p'.").
+        "The macro named {{green-bold}}~p{{reset}} on line {{yellow-bold}}~p{{reset}} does not respect the format "
+        "defined by the regular expression {{red-bold}}'~p'{{reset}}.").
 -define(MACRO_AS_MODULE_NAME_MSG,
-        "Don't use macros (like ~s on line ~p) as module names.").
+        "Don't use macros (like {{cyan-bold}}~s{{reset}} on line {{yellow-bold}}~p{{reset}}) as module names.").
 -define(MACRO_MODULE_NAMES_EXCEPTIONS, ["MODULE"]).
 -define(MACRO_AS_FUNCTION_NAME_MSG,
-        "Don't use macros (like ~s on line ~p) as function names.").
+        "Don't use macros (like {{cyan-bold}}~s{{reset}} on line {{yellow-bold}}~p{{reset}}) as function names.").
 -define(NO_MACROS_MSG, "Unexpected macro (~p) used on line ~p.").
 -define(NO_BLOCK_EXPRESSIONS_MSG,
         "Unexpected block expression (begin-end) used on line ~p.").
 -define(MISSING_SPACE_MSG, "Missing space to the ~s of ~p on line ~p").
 -define(UNEXPECTED_SPACE_MSG, "Unexpected space to the ~s of ~p on line ~p").
 -define(NESTING_LEVEL_MSG,
-        "The expression on line ~p and column ~p is nested "
+        "The expression on line {{yellow-bold}}~p{{reset}} and column {{yellow-bold}}~p{{reset}} is nested "
         "beyond the maximum level of ~p.").
 -define(GOD_MODULES_MSG,
         "This module has too many functions (~p). "
         "Consider breaking it into a number of modules.").
 -define(NO_IF_EXPRESSION_MSG,
-        "Replace the 'if' expression on line ~p with a 'case' "
+        "Replace the {{red-bold}}'if'{{reset}} expression on line {{yellow-bold}}~p{{reset}} with a 'case' "
         "expression or function clauses.").
 -define(INVALID_DYNAMIC_CALL_MSG,
-        "Remove the dynamic function call on line ~p. "
+        "Remove the dynamic function call on line {{yellow-bold}}~p{{reset}}. "
         "Only modules that define callbacks should make dynamic calls.").
 -define(USED_IGNORED_VAR_MSG,
-        "Ignored variable is being used on line ~p and "
-        "column ~p.").
+        "Ignored variable is being used on line {{yellow-bold}}~p{{reset}} and "
+        "column {{yellow-bold}}~p{{reset}}.").
 -define(NO_BEHAVIOR_INFO,
-        "Use the '-callback' attribute instead of 'behavior_info/1' "
-        "on line ~p.").
+        "Use the {{cyan-bold}}'-callback'{{reset}} attribute instead of {{cyan-bold}}'behavior_info/1'{{reset}} "
+        "on line {{yellow-bold}}~p{{reset}}.").
 -define(FUNCTION_NAMING_CONVENTION_MSG,
-        "The function ~p does not respect the format defined by the "
+        "The function {{cyan-bold}}~p{{reset}} does not respect the format defined by the "
         "regular expression '~p'.").
 -define(VARIABLE_NAMING_CONVENTION_MSG,
-        "The variable ~p on line ~p does not respect the format "
+        "The variable {{cyan-bold}}~p{{reset}} on line {{yellow-bold}}~p{{reset}} does not respect the format "
         "defined by the regular expression '~p'.").
 -define(MODULE_NAMING_CONVENTION_MSG,
-        "The module ~p does not respect the format defined by the "
+        "The module {{cyan-bold}}~p{{reset}} does not respect the format defined by the "
         "regular expression '~p'.").
 -define(STATE_RECORD_MISSING_MSG,
         "This module implements an OTP behavior but is missing "
@@ -61,27 +61,27 @@
         "This module implements an OTP behavior and has a 'state' record "
         "but is missing a 'state()' type.").
 -define(NO_SPEC_WITH_RECORDS,
-        "The spec in line ~p uses a record, please define a type for the "
+        "The spec in line {{yellow-bold}}~p{{reset}} uses a record, please define a type for the "
         "record and use that instead.").
 -define(DONT_REPEAT_YOURSELF,
         "The code in the following (LINE, COL) locations has "
         "the same structure: ~s.").
 -define(MAX_MODULE_LENGTH,
-        "The code for module ~p has ~p lines which exceeds the "
-        "maximum of ~p.").
+        "The code for module {{cyan-bold}}~p{{reset}} has {{red-bold}}~p{{reset}} lines which exceeds the "
+        "maximum of {{yellow-bold}}~p{{reset}}.").
 -define(MAX_FUNCTION_LENGTH,
-        "The code for function ~p/~w has ~p lines which exceeds the "
-        "maximum of ~p.").
--define(NO_CALL_MSG, "The call to ~p:~p/~p on line ~p is in the no_call list.").
--define(NO_DEBUG_CALL_MSG, "Remove the debug call to ~p:~p/~p on line ~p.").
+        "The code for function {{cyan-bold}}~p/~w{{reset}} has {{red-bold}}~p{{reset}} lines which exceeds the "
+        "maximum of {{yellow-bold}}~p{{reset}}.").
+-define(NO_CALL_MSG, "The call to {{cyan-bold}}~p:~p/~p{{reset}} on line {{yellow-bold}}~p{{reset}} is in the no_call list.").
+-define(NO_DEBUG_CALL_MSG, "Remove the debug call to {{cyan-bold}}~p:~p/~p{{reset}} on line {{yellow-bold}}~p{{reset}}.").
 -define(NO_COMMON_CAVEATS_CALL_MSG,
-        "The call to ~p:~p/~p on line ~p is in the list of "
+        "The call to {{cyan-bold}}~p:~p/~p{{reset}} on line {{yellow-bold}}~p{{reset}} is in the list of "
         "Erlang Efficiency Guide common caveats.").
--define(NO_NESTED_TRY_CATCH, "Nested try...catch block starting at line ~p.").
+-define(NO_NESTED_TRY_CATCH, "Nested try...catch block starting at line {{yellow-bold}}~p{{reset}}.").
 -define(NO_SUCCESSIVE_MAPS_MSG,
         "Found map update after map construction/update at line ~p.").
 -define(ATOM_NAMING_CONVENTION_MSG,
-        "Atom ~p on line ~p does not respect the format "
+        "Atom {{cyan-bold}}~p{{reset}} on line {{yellow-bold}}~p{{reset}} does not respect the format "
         "defined by the regular expression '~p'.").
 -define(NO_THROW_MSG, "Usage of throw/1 on line ~p is not recommended").
 -define(NO_DOLLAR_SPACE_MSG,
